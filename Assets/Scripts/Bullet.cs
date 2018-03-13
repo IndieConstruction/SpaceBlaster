@@ -9,9 +9,20 @@ public class Bullet : MonoBehaviour {
     public BulletEvent OnShoot;
     public BulletEvent OnDestroy;
 
+    public EnemmyHit OnEnemyHit;
+
     private void OnCollisionEnter(Collision collision) {
-        if (CurrentState == State.InUse)
+
+        Enemy enemyHit;
+
+        if (CurrentState == State.InUse) {
+            enemyHit = collision.collider.gameObject.GetComponent<Enemy>();
+            if(enemyHit != null) {
+                if (OnEnemyHit != null)
+                    OnEnemyHit(enemyHit, this);
+            }
             DestroyMe();
+        }
     }
 
     private void FixedUpdate() {
@@ -46,8 +57,10 @@ public class Bullet : MonoBehaviour {
     #endregion
 
     #region Dichiarazioni tipi
-
+    
     public delegate void BulletEvent(Bullet bullet);
+
+    public delegate void EnemmyHit(Enemy enemy, Bullet bullet);
 
     public enum State {
         InPool,

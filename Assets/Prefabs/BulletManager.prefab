@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 114296070424420384, guid: 75f8fa30c15c58644971593af50dc4f8,
     type: 2}
+  MaxBullet: 40
