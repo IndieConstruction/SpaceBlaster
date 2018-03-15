@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4616690924096026}
   - component: {fileID: 114041431689510394}
   m_Layer: 0
-  m_Name: BulletManager
+  m_Name: BulletStandardPoolManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5331b03015b456a43bf51eb151ab2360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 114296070424420384, guid: 75f8fa30c15c58644971593af50dc4f8,
-    type: 2}
+  BulletPrefab: {fileID: 0}
   MaxBullet: 40

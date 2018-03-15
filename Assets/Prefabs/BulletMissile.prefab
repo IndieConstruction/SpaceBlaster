@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4068244993736946}
-  - component: {fileID: 114296070424420384}
+  - component: {fileID: 114336115856160212}
   - component: {fileID: 54819475516216726}
   - component: {fileID: 65896819168252492}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BulletMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70a6aadb641b3084096403cc60e7bd25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806130853196632}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54819475516216726
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -141,7 +141,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114296070424420384
+--- !u!114 &114336115856160212
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -149,7 +149,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287361752978728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56fda57ed1c821d4ba286732d9a0e559, type: 3}
+  m_Script: {fileID: 11500000, guid: 15e56ed070cc64b4cb29ea45fda5b1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 0
