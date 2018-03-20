@@ -13,7 +13,7 @@ public interface IBullet {
 
     event IBulletEvents.BulletEvent OnShoot;
     event IBulletEvents.BulletEvent OnDestroy;
-    event IBulletEvents.EnemmyHit OnEnemyHit;
+    event IBulletEvents.EnemyHit OnEnemyHit;
     
 }
 
@@ -23,7 +23,7 @@ public interface IBullet {
 public class IBulletEvents {
 
     public delegate void BulletEvent(IBullet bullet);
-    public delegate void EnemmyHit(Enemy enemy, IBullet bullet);
+    public delegate void EnemyHit(IEnemy enemy, IBullet bullet);
 
 }
 

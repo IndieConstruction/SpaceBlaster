@@ -38,9 +38,9 @@ public class ShootInput : MonoBehaviour {
         bulletToShoot.OnEnemyHit += OnEnemyHit;
     }
 
-    public void OnEnemyHit(Enemy enemyHit, IBullet bullet) {
+    public void OnEnemyHit(IEnemy enemyHit, IBullet bullet) {
         bullet.OnEnemyHit -= OnEnemyHit;
-        enemyHit.TakeDamage();
+        enemyHit.TakeDamage(1);
         playerData.Score += enemyHit.ScoreValue;
     }
 

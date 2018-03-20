@@ -18,7 +18,7 @@ public abstract class BulletBase : MonoBehaviour, IBullet {
 
     public event IBulletEvents.BulletEvent OnShoot;
     public event IBulletEvents.BulletEvent OnDestroy;
-    public event IBulletEvents.EnemmyHit OnEnemyHit;
+    public event IBulletEvents.EnemyHit OnEnemyHit;
 
     #region Events
 
@@ -32,7 +32,7 @@ public abstract class BulletBase : MonoBehaviour, IBullet {
             OnDestroy(this);
     }
 
-    protected void InvokeOnEnemyHitt(Enemy enemy) {
+    protected void InvokeOnEnemyHitt(IEnemy enemy) {
         if (OnEnemyHit != null)
             OnEnemyHit(enemy, this);
     }
@@ -84,10 +84,10 @@ public abstract class BulletBase : MonoBehaviour, IBullet {
     }
 
     protected virtual void OnCollisionDefaultBehaviour(Collision collision) {
-        Enemy enemyHit;
+        IEnemy enemyHit;
 
         if (CurrentState == IBulletState.InUse) {
-            enemyHit = collision.collider.gameObject.GetComponent<Enemy>();
+            enemyHit = collision.collider.gameObject.GetComponent<IEnemy>();
             if (enemyHit != null) {
                 InvokeOnEnemyHitt(enemyHit);
             }

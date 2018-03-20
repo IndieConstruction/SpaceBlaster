@@ -14,4 +14,7 @@ public class PlayerData : MonoBehaviour {
                 EventManager.OnScoreUpdated(this);
         }
     }
+
+    
+
 }
