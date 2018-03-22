@@ -64,14 +64,18 @@ public abstract class BulletBase : MonoBehaviour, IBullet {
         force = _force;
     }
 
-    public void DestroyMe() {
+    public void DestroyBehaviour() {
         CurrentState = IBulletState.Destroying;
-        if (OnDestroy != null)
-            OnDestroy(this);
         DestroyVisualEffect();
     }
 
     public virtual void DestroyVisualEffect() {
+        DoDestroy();
+    }
+
+    private void DoDestroy() {
+        if (OnDestroy != null)
+            OnDestroy(this);
         CurrentState = IBulletState.InPool;
     }
 
@@ -91,7 +95,7 @@ public abstract class BulletBase : MonoBehaviour, IBullet {
             if (enemyHit != null) {
                 InvokeOnEnemyHitt(enemyHit);
             }
-            DestroyMe();
+            DestroyBehaviour();
         }
     }
 
