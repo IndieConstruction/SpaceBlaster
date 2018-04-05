@@ -56,6 +56,9 @@ GameObject:
   - component: {fileID: 114359631032462008}
   - component: {fileID: 114027182174845314}
   - component: {fileID: 114040694109118190}
+  - component: {fileID: 65717036495445022}
+  - component: {fileID: 114095625443318504}
+  - component: {fileID: 114206445832191812}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -145,6 +148,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538912069915306}
   m_Mesh: {fileID: 4300006, guid: add769d179a9826498fc063c005d35bd, type: 3}
+--- !u!65 &65717036495445022
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659997339426704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.06, y: 1, z: 3.16}
+  m_Center: {x: 0, y: 0, z: 0.37}
 --- !u!95 &95615854179781126
 Animator:
   serializedVersion: 3
@@ -184,6 +199,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211f94e8d8bcf0b4ea082d90a2162ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114095625443318504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659997339426704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f978151ef8a7428d1b32d2aaf626b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyDestroyer: 1
+  PlayerDestroyer: 0
+  BulletDestroyer: 1
+  BackgroundRespawner: 0
+--- !u!114 &114206445832191812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659997339426704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac24c0e206429d4eb94f8093686c342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114359631032462008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,6 +239,8 @@ MonoBehaviour:
   ShootForce: 0.3
   ShootKey: 271
   ShootStartPosition: {fileID: 4118533910439342}
+  CurrentBulletGO: {fileID: 1287361752978728, guid: 87f697cb82d92db44b7e8ea405059589,
+    type: 2}
 --- !u!114 &114717451179531042
 MonoBehaviour:
   m_ObjectHideFlags: 1

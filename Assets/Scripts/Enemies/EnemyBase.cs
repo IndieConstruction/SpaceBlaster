@@ -47,7 +47,7 @@ public abstract class EnemyBase : MonoBehaviour, IEnemy {
 
 
     private void OnBulletDestroy(IBullet bullet) {
-        
+        GameObject.Destroy(bullet.gameObject.GetComponent<CollisionController>());
     }
 
     public virtual void TakeDamage(int damage) {
@@ -68,6 +68,7 @@ public abstract class EnemyBase : MonoBehaviour, IEnemy {
         IBullet bulletToShoot = bulletManager.GetBullet(BulletID);
         bulletToShoot.gameObject.transform.position = ShootStartPosition.position;
         bulletToShoot.OnDestroy += OnBulletDestroy;
+        bulletToShoot.gameObject.AddComponent<CollisionController>().PlayerDestroyer = true;
         return bulletToShoot;
     }
 }

@@ -14,7 +14,8 @@ public class BulletStandard : BulletBase {
 
     public override void DestroyVisualEffect() {
         particleSystem.Play();
-        Invoke("VAI", 4.0f);
+        //GetComponent<collision>
+        Invoke("VAI", 0.2f);
     }
 
     public void VAI() {

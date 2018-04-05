@@ -95,7 +95,6 @@ public abstract class BulletBase : MonoBehaviour, IBullet {
             if (enemyHit != null) {
                 InvokeOnEnemyHitt(enemyHit);
             }
-            DestroyBehaviour();
         }
     }
 

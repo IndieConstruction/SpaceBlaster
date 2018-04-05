@@ -10,6 +10,7 @@ public interface IBullet {
     IBulletState CurrentState { get; set; }
 
     void Shoot(Vector3 _direction, float _force);
+    void DestroyBehaviour();
 
     event IBulletEvents.BulletEvent OnShoot;
     event IBulletEvents.BulletEvent OnDestroy;
