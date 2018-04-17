@@ -1,35 +1,39 @@
 ﻿using UnityEngine;
 
-/// <summary>
-/// Interfaccia da implementre per ogni tipo di Bullet.
-/// </summary>
-public interface IBullet {
+namespace EH.SpaceBlaster.BulletSystem {
 
-    string ID { get; }
-    GameObject gameObject { get; }
-    IBulletState CurrentState { get; set; }
+    /// <summary>
+    /// Interfaccia da implementre per ogni tipo di Bullet.
+    /// </summary>
+    public interface IBullet {
 
-    void Shoot(Vector3 _direction, float _force);
-    void DestroyBehaviour();
+        string ID { get; }
+        GameObject gameObject { get; }
+        IBulletState CurrentState { get; set; }
 
-    event IBulletEvents.BulletEvent OnShoot;
-    event IBulletEvents.BulletEvent OnDestroy;
-    event IBulletEvents.EnemyHit OnEnemyHit;
-    
-}
+        void Shoot(Vector3 _direction, float _force);
+        void DestroyBehaviour();
 
-/// <summary>
-/// Classe che dichiara le tipologie di delegato utilizzate dall'interfaccia IBullet.
-/// </summary>
-public class IBulletEvents {
+        event IBulletEvents.BulletEvent OnShoot;
+        event IBulletEvents.BulletEvent OnDestroy;
+        event IBulletEvents.EnemyHit OnEnemyHit;
 
-    public delegate void BulletEvent(IBullet bullet);
-    public delegate void EnemyHit(IEnemy enemy, IBullet bullet);
+    }
 
-}
+    /// <summary>
+    /// Classe che dichiara le tipologie di delegato utilizzate dall'interfaccia IBullet.
+    /// </summary>
+    public class IBulletEvents {
 
-public enum IBulletState {
-    InPool,
-    Destroying,
-    InUse,
+        public delegate void BulletEvent(IBullet bullet);
+        public delegate void EnemyHit(IEnemy enemy, IBullet bullet);
+
+    }
+
+    public enum IBulletState {
+        InPool,
+        Destroying,
+        InUse,
+    }
+
 }

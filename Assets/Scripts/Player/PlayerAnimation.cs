@@ -9,8 +9,8 @@ public class PlayerAnimation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        pmove = GetComponent<PlayerMovement>();
-        anim = GetComponentInChildren<Animator>();
+        pmove = GetComponentInParent<PlayerMovement>();
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -18,4 +18,8 @@ public class PlayerAnimation : MonoBehaviour {
         anim.SetInteger("xAxis", pmove.XAxisMovement);
         anim.SetInteger("yAxis", pmove.YAxisMovement);
 	}
+
+    public void OnAnimationCompleted() {
+        Debug.Log("Animation Completed");
+    }
 }

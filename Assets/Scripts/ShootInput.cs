@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using EH.SpaceBlaster.BulletSystem;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
