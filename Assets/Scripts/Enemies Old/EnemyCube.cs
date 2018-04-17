@@ -20,7 +20,7 @@ namespace EH.SpaceBlaster.EnemySystem_Old {
         }
 
         private void Update() {
-            MovementEngine = new MoveBehaviour2();
+            
         }
 
         //public override void MovementBehaviour() {

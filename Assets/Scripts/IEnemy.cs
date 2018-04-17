@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 
-public interface IEnemy {
+namespace EH.SpaceBlaster.EnemySystem_Old {
 
-    string ID { get; }
-    GameObject gameObject { get; }
-    int Life { get; }
-    int ScoreValue { get; }
+    public interface IEnemy {
 
-    void MovementBehaviour();
-    void ShootBehaviour();
-    void TakeDamage(int damage);
+        string ID { get; }
+        GameObject gameObject { get; }
+        int Life { get; }
+        int ScoreValue { get; }
 
+        void MovementBehaviour();
+        void ShootBehaviour();
+        void TakeDamage(int damage);
+
+    }
 }

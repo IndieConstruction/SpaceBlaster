@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EH.SpaceBlaster.EnemySystem_Old;
 
 public abstract class BulletBase : MonoBehaviour, IBullet {
 

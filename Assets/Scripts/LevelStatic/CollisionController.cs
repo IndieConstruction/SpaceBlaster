@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EH.SpaceBlaster.EnemySystem_Old;
 
 public class CollisionController : MonoBehaviour {
 

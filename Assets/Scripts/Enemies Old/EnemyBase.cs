@@ -26,7 +26,6 @@ namespace EH.SpaceBlaster.EnemySystem_Old {
             BulletID = currentBullet.ID;
             ShootCooldownBK = ShootCooldown;
 
-            MovementEngine = new MoveBehaviour1();
         }
 
         public string ID {
@@ -40,7 +39,7 @@ namespace EH.SpaceBlaster.EnemySystem_Old {
         public int Life { get; private set; }
 
         public void MovementBehaviour() {
-            MovementEngine.DoMove();
+            MovementEngine.DoMove(this.transform, 0.5f);
         }
 
 
@@ -63,10 +62,10 @@ namespace EH.SpaceBlaster.EnemySystem_Old {
         }
 
         private void FixedUpdate() {
-            if (Input.GetKeyDown(KeyCode.A))
-                MovementEngine = new MoveBehaviour1();
-            if (Input.GetKeyDown(KeyCode.S))
-                MovementEngine = new MoveBehaviour2();
+            //if (Input.GetKeyDown(KeyCode.A))
+            //    MovementEngine = new MoveBehaviour1();
+            //if (Input.GetKeyDown(KeyCode.S))
+            //    MovementEngine = new MoveBehaviour2();
 
 
             MovementBehaviour();
